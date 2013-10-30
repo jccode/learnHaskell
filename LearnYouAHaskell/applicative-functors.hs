@@ -1,8 +1,10 @@
 
+import Control.Applicative
 
 main = do
   -- test1
-  test1'
+  -- test1'
+  test2
 
 
 test1 = do
@@ -16,3 +18,6 @@ test1' = do
   putStrLn $ "You said " ++ line ++ " backwards!"
   putStrLn $ "Yes, you really said" ++ line ++ " backwards!"
   
+test2 = do
+  a <- (++) <$> getLine <*> getLine
+  putStrLn $ "The two line concatenated turn out to be " ++ a
